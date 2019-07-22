@@ -1,0 +1,13 @@
+.test-class .slick-next {
+    right: 10px;
+}
+
+.test-class .slick-prev {
+    left: 10px;    
+}
+
+.test-class .slick-next, .test-class .slick-prev {
+    &::before {
+        color: #f1f1f1
+    }
+}
