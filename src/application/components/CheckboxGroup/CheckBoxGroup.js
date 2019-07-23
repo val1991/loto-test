@@ -19,10 +19,10 @@ const CheckboxGroup = (props) => {
       props.onBlur(props.id, true);
     };
   
-      const { value, error, touched, className, children } = props;
+      const { value, error, touched, className, classNameError, children } = props;
   
       return (
-        <div className={className}>
+        <div className={`${className} ${touched && error ? classNameError : ''}`}>
             {Children.map(children, child => {
               return React.cloneElement(child, {
                 field: {
@@ -32,7 +32,7 @@ const CheckboxGroup = (props) => {
                 }
               });
             })}
-            {touched && <div>{error} </div>}
+            {/* {touched && <div>{error}</div>} */}
         </div>
       );
   }

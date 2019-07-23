@@ -1,9 +1,17 @@
+.test-class {
+    text-align: center;
+    border: 1px solid #f1f1f1;
+    height: 300px;
+    margin: 10px;
+}
+
 .test-class .slick-next {
     right: 10px;
 }
 
 .test-class .slick-prev {
-    left: 10px;    
+    left: 10px;  
+    z-index: 999;  
 }
 
 .test-class .slick-next, .test-class .slick-prev {

@@ -8,12 +8,19 @@ function generateRandomInteger(min, max) {
   }
 
 export const checkCardsValuesAction = () => dispatch => {
-    console.log('checkCardsValuesAction')
     let winValues = [];
 
     let index = 0;
-    for (index; index < 5; index++) {
-        winValues.push(generateRandomInteger(0, 20))
+    for (index; index < 5;index += 1) {
+        let subIndex = 0;
+        for (subIndex; subIndex < 5;) {
+            const randomValue = `${index}.` + generateRandomInteger(0, 20);
+            if(winValues.includes(randomValue)) {
+            } else {
+                winValues.push(randomValue);
+                subIndex += 1;
+            }
+        }
         
     }
 

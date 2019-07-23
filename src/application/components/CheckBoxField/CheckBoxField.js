@@ -7,6 +7,7 @@ const CheckBoxField = ({
     id,
     label,
     className,
+    winCards,
     ...props
 }) => {
     return (
@@ -17,6 +18,7 @@ const CheckBoxField = ({
             checked={value}
             onChange={onChange}
             onBlur={onBlur}
+            winCardValue={winCards.includes(id)}
             {...props}
         />
     );

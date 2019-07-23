@@ -1,0 +1,26 @@
+
+.root.root {
+    border: 1px solid #f1f1f1;
+    width: 20px;
+    flex: 1 1 17%;
+}
+
+.checked-win.checked-win {
+    border: 1px solid greenyellow;
+}
+
+.checked-lose.checked-lose {
+    border: 1px solid red;
+}
+
+.win {
+    color: greenyellow;
+}
+
+.lose {
+    color: red;
+}
+
+.checked {
+    color: aqua;
+}

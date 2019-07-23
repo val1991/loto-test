@@ -2,7 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 
-import { checkCardsValuesAction } from '../../reducer/modules/cards/actions';
+import { checkCardsValuesAction, resetCardsValuesAction } from '../../reducer/modules/cards/actions';
 
 import CardBlocksForm from './CardBlocksForm';
 
@@ -14,10 +14,16 @@ const CardsBlock = (props) => {
         setSubmitting(false);
     }
 
+    const handleResetForm = () => {
+        const { resetCardsValuesAction } = props;
+        resetCardsValuesAction();
+    }
+
     return (
         <div>
             <CardBlocksForm
                 handlSubmit={handlSubmit}
+                handleResetForm={handleResetForm}
                 initialCards={initialCards}
                 winCards={winCards}
             />
@@ -33,6 +39,6 @@ function mapStateProps(state) {
 }
 export default connect(
     mapStateProps,
-    { checkCardsValuesAction },
+    { checkCardsValuesAction, resetCardsValuesAction },
 )(CardsBlock);
 

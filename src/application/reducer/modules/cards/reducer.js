@@ -24,6 +24,10 @@ import {
             winCards: action.payload,
           }
         case RESET_CARDS:
+          return {
+            ...state,
+            winCards: [],
+          }
         default:
           return state;
       }
