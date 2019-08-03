@@ -10,8 +10,7 @@ const CardsBlock = (props) => {
     const { initialCards, winCards } = props;
     const handlSubmit = (values, setSubmitting) => {
         const { checkCardsValuesAction } = props;
-        checkCardsValuesAction()
-        setSubmitting(false);
+        checkCardsValuesAction(setSubmitting)
     }
 
     const handleResetForm = () => {
@@ -20,7 +19,8 @@ const CardsBlock = (props) => {
     }
 
     return (
-        <div>
+        <div className="cards-wrapper">
+            <h2>Title</h2>
             <CardBlocksForm
                 handlSubmit={handlSubmit}
                 handleResetForm={handleResetForm}

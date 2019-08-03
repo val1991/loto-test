@@ -1,10 +1,12 @@
 import React from 'react';
 
+import './style.scss';
+
 const FooterComponent = () => {
     return (
-        <div>
+        <footer>
             FooterComponent
-        </div>
+        </footer>
     );
 }
 

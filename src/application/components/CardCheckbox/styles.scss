@@ -3,18 +3,31 @@
     border: 1px solid #f1f1f1;
     width: 20px;
     flex: 1 1 17%;
+
+    &:hover {
+        border-color: pink;
+        background: #fff;
+    }
 }
 
 .checked-win.checked-win {
-    border: 1px solid greenyellow;
+    border: 1px solid green;
+
+    &:hover {
+        background: #fff;
+    }
 }
 
 .checked-lose.checked-lose {
     border: 1px solid red;
+
+    &:hover {
+        background: #fff;
+    }
 }
 
 .win {
-    color: greenyellow;
+    color: green;
 }
 
 .lose {

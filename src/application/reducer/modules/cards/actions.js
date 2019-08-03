@@ -7,7 +7,7 @@ function generateRandomInteger(min, max) {
     return Math.floor(min + Math.random()*(max + 1 - min))
   }
 
-export const checkCardsValuesAction = () => dispatch => {
+export const checkCardsValuesAction = (setSubmitting) => dispatch => {
     let winValues = [];
 
     let index = 0;
@@ -28,6 +28,7 @@ export const checkCardsValuesAction = () => dispatch => {
         type: CHECK_VALUES,
         payload: winValues,
     });
+    setSubmitting(false);
 };
 
 export const resetCardsValuesAction = () => dispatch => {

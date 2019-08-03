@@ -19,3 +19,23 @@
         color: #f1f1f1
     }
 }
+
+.slider-item {
+    width: 100%;
+    display: inline-block;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+
+    h3 {
+        position: absolute;
+        top: 0;
+        left: 10%;
+    }
+
+    img {
+        margin: auto;
+        width: auto;
+        height: 300px;
+    }
+}
